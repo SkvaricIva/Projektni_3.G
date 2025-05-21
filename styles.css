@@ -1,0 +1,27 @@
+.row {
+    display: flex;
+    display: flex;
+}
+
+.column {
+    padding: 10px;
+}
+
+.column.side {
+    flex: 1;
+    flex: 1;
+    flex: 1;
+}
+
+.column.middle {
+    flex: 4;
+    flex: 4;
+    flex: 4;
+}
+
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        flex-direction: column;
+    }
+}
