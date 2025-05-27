@@ -54,6 +54,7 @@ nav ul li a:hover{
 main{
   display: flex;
   min-height: 100vh;
+  min-width: 100vw;
 }
 aside{
   text-align: left;
@@ -84,7 +85,10 @@ footer{
     min-width: 20vw;
     border: 4px solid rgb(144, 231, 179);
 }
-img {
+.img2 {
+  max-width: 50vw;
+  min-width: 20vw;
+  border: 4px solid rgb(144, 231, 179);
   display: block;
   margin-left: auto;
   margin-right: auto;
