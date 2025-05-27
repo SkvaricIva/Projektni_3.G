@@ -1,27 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  margin: 0px;
+}
+header{
+  padding: 5vh;
+  text-align: center;
+  background-color: rgb(144, 231, 179);
+}
+h1{
+  color: White;
+}
+nav{
+  padding: 2vh;
+  text-align: center;
+  background-color: rgb(122, 212, 158);
+}
+nav ul li{
+  display: inline-block;
+  margin: 5px;
+  }
+nav ul li a{
+  text-decoration: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+nav ul li a:link{
+  color: black;
+  background-color: #5F9EA0;
+}
+nav ul li a:hover{
+  color: PaleTurquoise;
+  background-color: #000000;
+}
 .row {
-    display: flex;
-    display: flex;
+  display: flex;
+  display: flex;
 }
-
 .column {
-    padding: 10px;
+  padding: 10px;
 }
-
 .column.side {
-    flex: 1;
-    flex: 1;
-    flex: 1;
+   flex: 1;
+   flex: 1;
+   flex: 1;
 }
-
 .column.middle {
-    flex: 4;
-    flex: 4;
-    flex: 4;
+  flex: 4;
+  flex: 4;
+  flex: 4;
 }
-
 @media (max-width: 600px) {
-    .row {
-        flex-direction: column;
-        flex-direction: column;
-    }
+  .row {
+    flex-direction: column;
+    flex-direction: column;
+  }
+}
+main{
+  display: flex;
+  min-height: 100vh;
+}
+aside{
+  text-align: left;
+  padding: 15px;
+  background-color: rgb(179, 244, 205);
+}
+section{
+  text-align: left;
+  padding: 20px;
+  background-color: rgb(231, 251, 239);
+}
+div{
+  background-color: Black;
+}
+footer{
+  padding: 1vh;
+  text-align: center;
+  background-color: rgb(144, 231, 179);
+}
+.avatar{
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
