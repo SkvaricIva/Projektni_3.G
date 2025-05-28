@@ -1,100 +1,136 @@
 * {
   box-sizing: border-box;
 }
-body{
+
+body {
   margin: 0px;
 }
-header{
+
+header {
   padding: 5vh;
   text-align: center;
   background-color: rgb(144, 231, 179);
 }
-h1{
+
+h1 {
   color: White;
 }
-nav{
+
+aside {
   padding: 2vh;
   text-align: center;
-  background-color: rgb(122, 212, 158);
+  background-color: rgb(179, 244, 205);
 }
-nav ul li{
+
+aside ul li {
   display: inline-block;
+  padding-bottom: 15px;
   margin: 5px;
-  }
-nav ul li a{
+}
+
+aside ul li a {
   text-decoration: none;
   padding: 10px 10px;
   border-radius: 5px;
 }
-nav ul li a:link{
+
+aside ul li a:link {
   color: rgb(255, 255, 255);
   background-color: rgb(95, 184, 130);
 }
-nav ul li a:hover{
+
+aside ul li a:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(68, 160, 105);
 }
+
 .row {
   display: flex;
 }
+
 .column {
   padding: 10px;
 }
+
 .column.side {
-   flex: 1;
+  flex: 0.5;
 }
+
 .column.middle {
   flex: 5;
 }
+
 @media (max-width: 600px) {
   .row {
     flex-direction: column;
   }
+
+  aside {
+    padding: 10px;
+    max-height: 90px;
+    overflow: auto;
+  }
 }
-main{
+
+main {
   display: flex;
   min-height: 100vh;
   min-width: 100vw;
 }
-aside{
-  text-align: left;
-  padding: 15px;
-  background-color: rgb(179, 244, 205);
-}
-section{
+
+section {
   text-align: left;
   padding: 20px;
   background-color: rgb(231, 251, 239);
 }
-div{
-  background-color: Black;
-}
-footer{
+
+footer {
   padding: 1vh;
   text-align: center;
   color: white;
   background-color: rgb(144, 231, 179);
 }
-.slika1{
-    max-width: 50vw;
-    min-width: 20vw;
-    border: 4px solid rgb(144, 231, 179);
-}
-.slika2{
-    max-width: 50vw;
-    min-width: 20vw;
-    border: 4px solid rgb(144, 231, 179);
-}
-.img2 {
+
+.slika1 {
   max-width: 50vw;
+  min-width: 20vw;
+  border: 4px solid rgb(144, 231, 179);
+}
+
+.slika2 {
+  max-width: 45vw;
+  min-width: 20vw;
+  border: 4px solid rgb(144, 231, 179);
+}
+
+.img2 {
+  max-width: 45vw;
   min-width: 20vw;
   border: 4px solid rgb(144, 231, 179);
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-.avatar{
+
+.avatar {
   vertical-align: middle;
-  width: 45px;
+  width: 42px;
   border-radius: 50%;
+}
+
+.avatar2 {
+  vertical-align: middle;
+  width: 52px;
+  border-radius: 50%;
+}
+
+.avatar3 {
+  vertical-align: middle;
+  width: 42px;
+  border-radius: 50%;
+}
+
+.avatar4 {
+  vertical-align: middle;
+  width: 42px;
 }
