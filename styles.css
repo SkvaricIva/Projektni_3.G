@@ -91,20 +91,8 @@ footer {
   background-color: rgb(144, 231, 179);
 }
 
-.slika1 {
-  max-width: 50vw;
-  min-width: 20vw;
-  border: 4px solid rgb(144, 231, 179);
-}
-
-.slika2 {
-  max-width: 45vw;
-  min-width: 20vw;
-  border: 4px solid rgb(144, 231, 179);
-}
-
 .img2 {
-  max-width: 45vw;
+  max-width: 40vw;
   min-width: 20vw;
   border: 4px solid rgb(144, 231, 179);
   display: block;
