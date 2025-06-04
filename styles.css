@@ -54,7 +54,7 @@ aside ul li a:hover {
 }
 
 .column.side {
-  flex: 0.5;
+  flex: 1;
 }
 
 .column.middle {
@@ -68,7 +68,7 @@ aside ul li a:hover {
 
   aside {
     padding: 10px;
-    max-height: 90px;
+    max-height: 100px;
     overflow: auto;
   }
 }
