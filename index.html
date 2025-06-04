@@ -6,12 +6,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* 1) Header ostaje position: relative kako bi se apsolutno pozicionirani krug (s fotkom) kretao unutar njega */
+    header {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 2) Krug s pozadinom (fotka unutar) */
+    #rollingCircle {
+      position: absolute;
+      bottom: 0;                  /* drži ga na dnu zaglavlja */
+      width: 50px;                /* promjer kruga */
+      height: 50px;
+      border-radius: 50%;         /* čini ga savršeno okruglim */
+      background-image: url("gumb.jpg");
+      background-size: cover;     /* slika popunjava cijeli krug */
+      background-position: center;
+      /* transform: koristimo samo za rotaciju, horizontalni pomak radimo preko left u JS-u */
+      transform: rotate(0deg);
+    }
+  </style>
 </head>
 
 <body>
 
   <header>
     <h1 id="Gumbići_sa_srcem">Gumbići sa srcem</h1>
+    <div id="rollingCircle"></div>
   </header>
 
   <main class="row">
@@ -22,6 +44,7 @@
         <li><a href="prigode.html" target="_self">Prigode</a></li>
         <li><a href="cijene.html" target="_self">Cijene</a></li>
         <li><a href="narudzbe.html" target="_self">Narudžbe</a></li>
+        <li><a href="zadovoljni_kupci.html" target="_self">Zadovoljni kupci</a></li>
       </ul>
     </aside>
 
@@ -44,6 +67,68 @@
     <a href="https://www.facebook.com/gumbicisasrcem" target="_blank"><img src="Facebook.png" class="avatar3"></a>&nbsp;
     <a href="" target="_blank"><img src="Instagram.png" class="avatar"></a>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const circle = document.getElementById("rollingCircle");
+        const header = document.querySelector("header");
+
+        // Dimenzije kruga (u pikselima)
+        const circleDiameter = circle.offsetWidth;
+        // Obujam kruga: π·d
+        const circumference = Math.PI * circleDiameter;
+        // Koliko stupnjeva rotacije po svakom pikselu pomaka
+        const degPerPixel = 360 / circumference;
+
+        // Početna X-koordinata: KRUG počinje uz sam desni rub (unutra)
+        // header.clientWidth - circleDiameter znači da je krug točno na desnom rubu
+        let posX = header.clientWidth - circleDiameter;
+        // Početni stupnjevi rotacije
+        let rotationDeg = 0;
+
+        // Brzina pomaka kruga (pikseli/s)
+        const speedPxPerSec = 100;
+        let lastTimestamp = null;
+
+        function animate(timestamp) {
+          if (!lastTimestamp) lastTimestamp = timestamp;
+          const deltaSec = (timestamp - lastTimestamp) / 1000;
+          lastTimestamp = timestamp;
+
+          // Pomak udesno za dx = speedPxPerSec·deltaSec
+          const dx = speedPxPerSec * deltaSec;
+          posX += dx;
+
+          // Budući da se krug sada kotrlja udesno, rotaciju MORA biti negativno
+          // (tako da izgleda kao da se točno “kotrlja”)
+          rotationDeg -= dx * degPerPixel;
+
+          // Ako je cijeli krug izašao van desne strane (posX >= header.clientWidth),
+          // resetiramo ga tako da se pojavi s lijevog (offscreen) i nastavljamo desno
+          if (posX >= header.clientWidth) {
+            posX = -circleDiameter;
+            rotationDeg = 0;
+          }
+
+          // Uvjetni pomak (left) i rotacija (transform: rotate)
+          circle.style.left = posX + "px";
+          circle.style.transform = `rotate(${rotationDeg}deg)`;
+
+          requestAnimationFrame(animate);
+        }
+
+        // Početna namještanja prije prve animacije
+        circle.style.left = posX + "px";
+        circle.style.transform = `rotate(${rotationDeg}deg)`;
+
+        // Start beskrajne petlje animacije
+        requestAnimationFrame(animate);
+
+        // Nakon što se krug “izvukao” desno i zatim resetira na -circleDiameter,
+        // kod pri svakom idućem resetu automatski koristi novu header.clientWidth,
+        // što znači da i nakon promjene veličine prozora (resize) i dalje 
+        // uvijek dobijete ispravan loop s lijeva prema desno.
+      });
+  </script>
 
 </body>
 

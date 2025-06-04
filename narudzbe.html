@@ -22,6 +22,7 @@
         <li><a href="latice.html" target="_self">Latice</a></li>
         <li><a href="prigode.html" target="_self">Prigode</a></li>
         <li><a href="cijene.html" target="_self">Cijene</a></li>
+        <li><a href="zadovoljni_kupci.html" target="_self">Zadovoljni kupci</a></li>
       </ul>
     </aside>
 
@@ -29,16 +30,16 @@
       <form>
         <fieldset>
           <label>Ime:</label>
-          <input type="text" required><br><br>
+          <input id="ime" type="text" required><br><br>
           <label>Prezime:</label>
-          <input type="text" required><br><br>
+          <input id="prezime" type="text" required><br><br>
           <label>Adresa:</label>
-          <input type="text" required><br><br>
+          <input id="adresa" type="text" required><br><br>
           <label>Email:</label>
-          <input type="email" required><br><br>
+          <input id="email" type="email" required><br><br>
           <label>Telefon:</label>
-          <input type="tel" required><br><br>
-          <button id="unesi">Pošalji</button>
+          <input id="telefon" type="tel" required><br><br>
+          <button id="unesi" onclick="unesi()">Pošalji</button>
         </fieldset>
       </form>
     </section>
@@ -51,7 +52,7 @@
     <a href="https://www.facebook.com/gumbicisasrcem" target="_blank"><img src="Facebook.png" class="avatar3"></a>&nbsp;
     <a href="" target="_blank"><img src="Instagram.png" class="avatar"></a>
   </footer>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
