@@ -6,12 +6,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    header {
+      position: relative;
+      overflow: hidden;
+    }
+    #rollingCircle {
+      position: absolute;
+      bottom: 0;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-image: url("gumb.jpg");
+      background-size: cover;
+      background-position: center;
+      transform: rotate(0deg);
+    }
+  </style>
 </head>
 
 <body>
 
   <header>
     <h1 id="Gumbići_sa_srcem">Gumbići</h1>
+    <div id="rollingCircle"></div>
   </header>
 
   <main class="row">
@@ -22,7 +40,6 @@
         <li><a href="prigode.html" target="_self">Prigode</a></li>
         <li><a href="cijene.html" target="_self">Cijene</a></li>
         <li><a href="narudzbe.html" target="_self">Narudzbe</a></li>
-        <li><a href="zadovoljni_kupci.html" target="_self">Zadovoljni kupci</a></li>
       </ul>
     </aside>
 
@@ -38,6 +55,7 @@
     <a href="https://www.facebook.com/gumbicisasrcem" target="_blank"><img src="Facebook.png" class="avatar3"></a>&nbsp;
     <a href="" target="_blank"><img src="Instagram.png" class="avatar"></a>
   </footer>
+  <script src="script2.js"></script>
 
 </body>
 

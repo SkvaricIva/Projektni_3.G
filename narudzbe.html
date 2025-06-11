@@ -6,12 +6,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    table, th, td{
+        border: black 1px solid;
+        border-collapse: collapse;
+        justify-content: center;
+      }
+    header {
+      position: relative;
+      overflow: hidden;
+    }
+    #rollingCircle {
+      position: absolute;
+      bottom: 0;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-image: url("gumb.jpg");
+      background-size: cover;
+      background-position: center;
+      transform: rotate(0deg);
+    }
+  </style>
 </head>
 
 <body>
 
   <header>
     <h1 id="Gumbići_sa_srcem">Narudžbe</h1>
+    <div id="rollingCircle"></div>
   </header>
 
   <main class="row">
@@ -22,26 +45,20 @@
         <li><a href="latice.html" target="_self">Latice</a></li>
         <li><a href="prigode.html" target="_self">Prigode</a></li>
         <li><a href="cijene.html" target="_self">Cijene</a></li>
-        <li><a href="zadovoljni_kupci.html" target="_self">Zadovoljni kupci</a></li>
       </ul>
     </aside>
 
     <section class="column middle">
-      <form>
-        <fieldset>
-          <label>Ime:</label>
-          <input id="ime" type="text" required><br><br>
-          <label>Prezime:</label>
-          <input id="prezime" type="text" required><br><br>
-          <label>Adresa:</label>
-          <input id="adresa" type="text" required><br><br>
-          <label>Email:</label>
-          <input id="email" type="email" required><br><br>
-          <label>Telefon:</label>
-          <input id="telefon" type="tel" required><br><br>
-          <button id="unesi" onclick="unesi()">Pošalji</button>
-        </fieldset>
-      </form>
+      <fieldset>
+        Ime: <input id="ime" type="text" required><br><br>
+        Prezime: <input id="prezime" type="text" required><br><br>
+        Adresa: <input id="adresa" type="text" required><br><br>
+        Email: <input id="email" type="email" required><br><br>
+        Telefon: <input id="telefon" type="tel" required><br><br>
+        <button id="unesi" onclick="unesi()">Pošalji</button>
+        <h3>Neke od narudžba zadovoljnih kupaca:</h3>
+        <table id="tablica"></table>
+      </fieldset>
     </section>
   </main>
 
@@ -52,7 +69,7 @@
     <a href="https://www.facebook.com/gumbicisasrcem" target="_blank"><img src="Facebook.png" class="avatar3"></a>&nbsp;
     <a href="" target="_blank"><img src="Instagram.png" class="avatar"></a>
   </footer>
-  <script src="script.js"></script>
+  <script src="script1.js"></script>
 </body>
 
 </html>
