@@ -29,13 +29,19 @@ function unesi() {
 
 function ispisTablice(){
   let tablica=document.getElementById("tablica");
-  tablica.innerHTML="<tr><th>Ime</th><th>Prezime</th><th>Adresa</th><th>Email</th><th>Telefon</th></tr>";
+  tablica.innerHTML="<tr><th>Ime</th><th>Prezime</th><th>Adresa</th><th>Email</th><th>Telefon</th><th>Obriši ako se usudiš</th></tr>";
   for(let i=0;i<kupci.length;i++)
-    tablica.innerHTML+="<tr><td>"+kupci[i].ime+"</td><td>"+kupci[i].prezime+"</td><td>"+kupci[i].adresa+"</td><td>"+kupci[i].email+"</td><td>"+kupci[i].telefon+"</td></tr>";
+    tablica.innerHTML+="<tr><td>"+kupci[i].ime+"</td><td>"+kupci[i].prezime+"</td><td>"+kupci[i].adresa+"</td><td>"+kupci[i].email+"</td><td>"+kupci[i].telefon+"</td><td>"+"<img onclick='brisi("+i+")' src='delete_icon.png'>"+"</td></tr>";
 }
 
 function spremi(){
   localStorage.setItem("kupci",JSON.stringify(kupci));
+}
+
+function brisi(index){
+  kupci.splice(index,1);
+  ispisTablice();
+  spremi();
 }
 
 //animacija u headeru
