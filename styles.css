@@ -92,20 +92,86 @@ footer {
   background-color: rgb(255, 141, 141);
 }
 
-.img2 {
+.img1 {
   max-width: 40vw;
   min-width: 20vw;
   border: 4px solid rgb(255, 141, 141);
 }
 
-.img3 {
+.img2 {
   max-width: 37.4vw;
   min-width: 20vw;
   border: 4px solid rgb(255, 141, 141);
 }
 
-.img4 {
+.img3 {
   max-width: 33.17vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img4{
+  max-width: 40vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img5{
+  max-width: 28.955vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img6{
+  max-width: 31.48vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img7{
+  max-width: 29.09vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img8{
+  max-width: 26.09vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img9{
+  max-width: 26vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img10{
+  max-width: 23.025vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img11{
+  max-width: 23.13vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img12{
+  max-width: 32.9vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img13{
+  max-width: 42.3vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img14{
+  max-width: 43.58vw;
   min-width: 20vw;
   border: 4px solid rgb(255, 141, 141);
 }
