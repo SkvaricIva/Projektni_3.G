@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const circle = document.getElementById("rollingCircle");
         const header = document.querySelector("header");
 
-        //dimenzije gumba(u pikselima)
+        //dimenzije gumba
         const circleDiameter = circle.offsetWidth;
         //obujam gumba
         const circumference = Math.PI * circleDiameter;
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         //početni stupnjevi rotacije
         let rotationDeg = 0;
 
-        //brzina gumba (pikseli/s)
+        //brzina gumba
         const speedPxPerSec = 100;
         let lastTimestamp = null;
 
