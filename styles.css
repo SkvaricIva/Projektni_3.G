@@ -9,7 +9,7 @@ body {
 header {
   padding: 5.2vh;
   text-align: center;
-  background-color: rgb(255, 141, 141);;
+  background-color: rgb(255, 141, 141);
 }
 
 h1 {
@@ -67,7 +67,7 @@ aside ul li a:hover {
 
   aside {
     padding: 10px;
-    max-height: 80px;
+    max-height: 100px;
     overflow: auto;
   }
 }
@@ -75,11 +75,10 @@ aside ul li a:hover {
 main {
   display: flex;
   min-height: 100vh;
-  min-width: 100vw;
 }
 
 section {
-  text-align: left;
+  text-align: center;
   padding: 20px;
   padding-left: 40px;
   background-color: rgb(253, 239, 239);
@@ -172,6 +171,42 @@ footer {
 
 .img14{
   max-width: 43.58vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img15{
+  max-width: 41.53vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img16{
+  max-width: 31.6vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img17{
+  max-width: 30.5vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img18{
+  max-width: 29.2vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img19{
+  max-width: 39.4vw;
+  min-width: 20vw;
+  border: 4px solid rgb(255, 141, 141);
+}
+
+.img20{
+  max-width: 38.9vw;
   min-width: 20vw;
   border: 4px solid rgb(255, 141, 141);
 }
